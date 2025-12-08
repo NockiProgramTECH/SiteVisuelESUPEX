@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre inscription</title>
+    <link rel="stylesheet" href="style/style.css">
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+
+        <!-- Top Header -->
+        <div class="top-header">
+            <div class="container d-flex justify-content-between align-items-center">
+                <!-- Dropdowns à gauche -->
+                <div class="dropdowns-container d-flex gap-3">
+                    <!-- Dropdown Poste -->
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownPoste" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-briefcase me-1"></i>Poste
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownPoste">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-search me-2"></i>Offres d'emploi</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user-graduate me-2"></i>Stages</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-handshake me-2"></i>Alternance</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-file-upload me-2"></i>Déposer un
+                                    CV</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Dropdown Contact -->
+                    <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="dropdownContact" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-envelope me-1"></i>Contact
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownContact">
+                            <li><a class="dropdown-item" href="#contact"><i class="fas fa-phone me-2"></i>Nous contacter</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-map-marker-alt me-2"></i>Nous
+                                    trouver</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-clock me-2"></i>Horaires</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-question-circle me-2"></i>FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Icônes sociales au centre -->
+                <div class="social-center">
+                    <ul class="social d-flex gap-3 mb-0">
+                        <li class="logo_social">
+                            <a href="#" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="logo_social">
+                            <a href="#" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="logo_social">
+                            <a href="#" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="logo_social">
+                            <a href="#" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="logo_social">
+                            <a href="#" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Compte utilisateur à droite -->
+        
+                 <div class="user-account">
+                    <div class="dropdown">
+                        <button class="dropdown-toggle user-toggle" type="button" id="dropdownUser"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle me-2"></i>
+                            <span class="user-text">Mon Compte</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+                            <li class="dropdown-header">
+                                <i class="fas fa-user-graduate me-2"></i>
+                                Espace Étudiant
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/login.html"><i class="fas fa-sign-in-alt me-2"></i>Se
+                                    connecter</a></li>
+                            <li><a class="dropdown-item" href="/signup.html"><i class="fas fa-user-plus me-2"></i>Créer
+                                    un compte</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-book me-2"></i>Espace pédagogique</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-calendar-alt me-2"></i>Emploi du
+                                    temps</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-file-alt me-2"></i>Notes et
+                                    résultats</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="dropdown-header">
+                                <i class="fas fa-chalkboard-teacher me-2"></i>
+                                Espace Enseignant
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-in-alt me-2"></i>Connexion
+                                    staff</a></li>
+                        </ul>
+                    </div>
+                </div> 
+
+
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                    <div class="header-logo">
+                        <img src="img/logo.jpg" alt="ESUEX Logo" class="img-fluid">
+                    </div>
+
+                    <nav class="nav-link mt-3 mt-md-0">
+                        <a href="/index.html">Accueil</a>
+                        <a href="/index.html#a-propos">A propos</a>
+                        <a href="/index.html#actualite">Actualité</a>
+                        <!-- dropdown addmission -->
+                        <div class="dropdown d-inline-block">
+                            <a class="dropdown-toggle" href="#admission" id="admissionDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Admission
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="admissionDropdown">
+                                <li><a class="dropdown-item" href="#admission">Conditions d'admission</a></li>
+                                <li><a class="dropdown-item" href="#admission">Processus de candidature</a></li>
+            
+                            </ul>
+                        
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+       <section id="main-container" class="main-container">
+        <div class="container">
+            <h3 class="column-title">Formulaire pré-inscription</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <blockquote class="blockquote">
+                        <h5>Cliquer <a class="primary-color" href="#">ici</a> pour télécharger la fiche d'inscription à remplir.</h5>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="col-lg-12" id="content-div">
+                <div id="loader" style="display:none;">
+                    <img src="https://www.esta.bf/css/spinner.gif" alt="Chargement en cours...">
+                </div>
+
+                <form id="esta-record-form-datatable" action="https://www.esta.bf/admission/pre-inscription/store" method="post" role="form">
+                    <input type="hidden" name="_token" value="MKb0Ww8XPy5aTOZrNxVC5KEwluyYhXE7xMYSevNP" autocomplete="off">                    <div class="error-container"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row" style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12) !important">
+                                <div class="col-md-12 pt-2 pb-2"><h4 class=""><u>Formulaire principal</u></h4></div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="formations">Formations</label>
+                                        <select class="form-control" name="formation" id="formations">
+                                            <option value="">Veuillez choisir</option>
+                                                                                            <option value="a6779907-8371-4fe6-bdf5-ef110e8613cf">BTS</option>
+                                                                                            <option value="6f98e888-a826-4a21-8870-ab59b42cc344">LICENCE</option>
+                                                                                            <option value="f9246a9d-8c15-417e-b8fd-d76445ecaa83">MASTER</option>
+                                                                                    </select>
+                                        <span class="formation_err error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" id="faculties">
+                                    <div class="form-group">
+                                        <label for="filière">Filières</label>
+                                        <select disabled class="form-control" id="filière"></select>
+                                        <span class="filière_err error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Civilité</label>
+                                        <select class="form-control" name="civilité" id="">
+                                            <option value="Monsieur">Monsieur</option>
+                                            <option value="Madame">Madame</option>
+                                            <option value="Mademoiselle">Mademoiselle</option>
+                                        </select>
+                                        <span class="civilité_err error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Nom</label>
+                                        <input class="form-control" name="nom" placeholder="Nom" type="text" required>
+                                        <span class="nom_err error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Prenom</label>
+                                        <input class="form-control" name="prenom" type="text" placeholder="Prenom" required>
+                                        <span class="prenom_err error text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Téléphone</label>
+                                        <input class="form-control" name="telephone" placeholder="Téléphone" type="text" required>
+                                        <span class="telephone_err error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Adresse email</label>
+                                        <input class="form-control" name="email" type="email" placeholder="Adresse email" required>
+                                        <span class="email_err error text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Nationalité</label>
+                                        <select class="form-control" name="nationalité" id="select2">
+                                                                                            <option  value="Monsieur">Afghanistan</option>
+                                                                                            <option  value="Monsieur">Afrique du Sud</option>
+                                                                                            <option  value="Monsieur">Albanie</option>
+                                                                                            <option  value="Monsieur">Algérie</option>
+                                                                                            <option  value="Monsieur">Allemagne</option>
+                                                                                            <option  value="Monsieur">Andorre</option>
+                                                                                            <option  value="Monsieur">Angola</option>
+                                                                                            <option  value="Monsieur">Anguilla</option>
+                                                                                            <option  value="Monsieur">Antarctique</option>
+                                                                                            <option  value="Monsieur">Antigua-et-Barbuda</option>
+                                                                                            <option  value="Monsieur">Arabie saoudite</option>
+                                                                                            <option  value="Monsieur">Argentine</option>
+                                                                                            <option  value="Monsieur">Arménie</option>
+                                                                                            <option  value="Monsieur">Aruba</option>
+                                                                                            <option  value="Monsieur">Australie</option>
+                                                                                            <option  value="Monsieur">Autriche</option>
+                                                                                            <option  value="Monsieur">Azerbaïdjan</option>
+                                                                                            <option  value="Monsieur">Bahamas</option>
+                                                                                            <option  value="Monsieur">Bahreïn</option>
+                                                                                            <option  value="Monsieur">Bangladesh</option>
+                                                                                            <option  value="Monsieur">Barbade</option>
+                                                                                            <option  value="Monsieur">Belgique</option>
+                                                                                            <option  value="Monsieur">Belize</option>
+                                                                                            <option  value="Monsieur">Bénin</option>
+                                                                                            <option  value="Monsieur">Bermudes</option>
+                                                                                            <option  value="Monsieur">Bhoutan</option>
+                                                                                            <option  value="Monsieur">Biélorussie</option>
+                                                                                            <option  value="Monsieur">Bolivie</option>
+                                                                                            <option  value="Monsieur">Bosnie-Herzégovine</option>
+                                                                                            <option  value="Monsieur">Botswana</option>
+                                                                                            <option  value="Monsieur">Brésil</option>
+                                                                                            <option  value="Monsieur">Brunéi Darussalam</option>
+                                                                                            <option  value="Monsieur">Bulgarie</option>
+                                                                                            <option selected value="Monsieur">Burkina Faso</option>
+                                                                                            <option  value="Monsieur">Burundi</option>
+                                                                                            <option  value="Monsieur">Cambodge</option>
+                                                                                            <option  value="Monsieur">Cameroun</option>
+                                                                                            <option  value="Monsieur">Canada</option>
+                                                                                            <option  value="Monsieur">Cap-Vert</option>
+                                                                                            <option  value="Monsieur">Chili</option>
+                                                                                            <option  value="Monsieur">Chine</option>
+                                                                                            <option  value="Monsieur">Chypre</option>
+                                                                                            <option  value="Monsieur">Colombie</option>
+                                                                                            <option  value="Monsieur">Comores</option>
+                                                                                            <option  value="Monsieur">Congo-Brazzaville</option>
+                                                                                            <option  value="Monsieur">Congo-Kinshasa</option>
+                                                                                            <option  value="Monsieur">Corée du Nord</option>
+                                                                                            <option  value="Monsieur">Corée du Sud</option>
+                                                                                            <option  value="Monsieur">Costa Rica</option>
+                                                                                            <option  value="Monsieur">Côte d’Ivoire</option>
+                                                                                            <option  value="Monsieur">Croatie</option>
+                                                                                            <option  value="Monsieur">Cuba</option>
+                                                                                            <option  value="Monsieur">Curaçao</option>
+                                                                                            <option  value="Monsieur">Danemark</option>
+                                                                                            <option  value="Monsieur">Djibouti</option>
+                                                                                            <option  value="Monsieur">Dominique</option>
+                                                                                            <option  value="Monsieur">Égypte</option>
+                                                                                            <option  value="Monsieur">Émirats arabes unis</option>
+                                                                                            <option  value="Monsieur">Équateur</option>
+                                                                                            <option  value="Monsieur">Érythrée</option>
+                                                                                            <option  value="Monsieur">Espagne</option>
+                                                                                            <option  value="Monsieur">Estonie</option>
+                                                                                            <option  value="Monsieur">Eswatini</option>
+                                                                                            <option  value="Monsieur">État de la Cité du Vatican</option>
+                                                                                            <option  value="Monsieur">États fédérés de Micronésie</option>
+                                                                                            <option  value="Monsieur">États-Unis</option>
+                                                                                            <option  value="Monsieur">Éthiopie</option>
+                                                                                            <option  value="Monsieur">Fidji</option>
+                                                                                            <option  value="Monsieur">Finlande</option>
+                                                                                            <option  value="Monsieur">France</option>
+                                                                                            <option  value="Monsieur">Gabon</option>
+                                                                                            <option  value="Monsieur">Gambie</option>
+                                                                                            <option  value="Monsieur">Géorgie</option>
+                                                                                            <option  value="Monsieur">Géorgie du Sud et îles Sandwich du Sud</option>
+                                                                                            <option  value="Monsieur">Ghana</option>
+                                                                                            <option  value="Monsieur">Gibraltar</option>
+                                                                                            <option  value="Monsieur">Grèce</option>
+                                                                                            <option  value="Monsieur">Grenade</option>
+                                                                                            <option  value="Monsieur">Groenland</option>
+                                                                                            <option  value="Monsieur">Guadeloupe</option>
+                                                                                            <option  value="Monsieur">Guam</option>
+                                                                                            <option  value="Monsieur">Guatemala</option>
+                                                                                            <option  value="Monsieur">Guernesey</option>
+                                                                                            <option  value="Monsieur">Guinée</option>
+                                                                                            <option  value="Monsieur">Guinée équatoriale</option>
+                                                                                            <option  value="Monsieur">Guinée-Bissau</option>
+                                                                                            <option  value="Monsieur">Guyana</option>
+                                                                                            <option  value="Monsieur">Guyane française</option>
+                                                                                            <option  value="Monsieur">Haïti</option>
+                                                                                            <option  value="Monsieur">Honduras</option>
+                                                                                            <option  value="Monsieur">Hongrie</option>
+                                                                                            <option  value="Monsieur">Île Bouvet</option>
+                                                                                            <option  value="Monsieur">Île Christmas</option>
+                                                                                            <option  value="Monsieur">Île de Man</option>
+                                                                                            <option  value="Monsieur">Île Norfolk</option>
+                                                                                            <option  value="Monsieur">Îles Åland</option>
+                                                                                            <option  value="Monsieur">Îles Caïmans</option>
+                                                                                            <option  value="Monsieur">Îles Cocos</option>
+                                                                                            <option  value="Monsieur">Îles Cook</option>
+                                                                                            <option  value="Monsieur">Îles Féroé</option>
+                                                                                            <option  value="Monsieur">Îles Heard et McDonald</option>
+                                                                                            <option  value="Monsieur">Îles Malouines</option>
+                                                                                            <option  value="Monsieur">Îles Mariannes du Nord</option>
+                                                                                            <option  value="Monsieur">Îles Marshall</option>
+                                                                                            <option  value="Monsieur">Îles mineures éloignées des États-Unis</option>
+                                                                                            <option  value="Monsieur">Îles Pitcairn</option>
+                                                                                            <option  value="Monsieur">Îles Salomon</option>
+                                                                                            <option  value="Monsieur">Îles Turques-et-Caïques</option>
+                                                                                            <option  value="Monsieur">Îles Vierges britanniques</option>
+                                                                                            <option  value="Monsieur">Îles Vierges des États-Unis</option>
+                                                                                            <option  value="Monsieur">Inde</option>
+                                                                                            <option  value="Monsieur">Indonésie</option>
+                                                                                            <option  value="Monsieur">Irak</option>
+                                                                                            <option  value="Monsieur">Iran</option>
+                                                                                            <option  value="Monsieur">Irlande</option>
+                                                                                            <option  value="Monsieur">Islande</option>
+                                                                                            <option  value="Monsieur">Israël</option>
+                                                                                            <option  value="Monsieur">Italie</option>
+                                                                                            <option  value="Monsieur">Jamaïque</option>
+                                                                                            <option  value="Monsieur">Japon</option>
+                                                                                            <option  value="Monsieur">Jersey</option>
+                                                                                            <option  value="Monsieur">Jordanie</option>
+                                                                                            <option  value="Monsieur">Kazakhstan</option>
+                                                                                            <option  value="Monsieur">Kenya</option>
+                                                                                            <option  value="Monsieur">Kirghizistan</option>
+                                                                                            <option  value="Monsieur">Kiribati</option>
+                                                                                            <option  value="Monsieur">Koweït</option>
+                                                                                            <option  value="Monsieur">La Réunion</option>
+                                                                                            <option  value="Monsieur">Laos</option>
+                                                                                            <option  value="Monsieur">Lesotho</option>
+                                                                                            <option  value="Monsieur">Lettonie</option>
+                                                                                            <option  value="Monsieur">Liban</option>
+                                                                                            <option  value="Monsieur">Libéria</option>
+                                                                                            <option  value="Monsieur">Libye</option>
+                                                                                            <option  value="Monsieur">Liechtenstein</option>
+                                                                                            <option  value="Monsieur">Lituanie</option>
+                                                                                            <option  value="Monsieur">Luxembourg</option>
+                                                                                            <option  value="Monsieur">Macédoine du Nord</option>
+                                                                                            <option  value="Monsieur">Madagascar</option>
+                                                                                            <option  value="Monsieur">Malaisie</option>
+                                                                                            <option  value="Monsieur">Malawi</option>
+                                                                                            <option  value="Monsieur">Maldives</option>
+                                                                                            <option  value="Monsieur">Mali</option>
+                                                                                            <option  value="Monsieur">Malte</option>
+                                                                                            <option  value="Monsieur">Maroc</option>
+                                                                                            <option  value="Monsieur">Martinique</option>
+                                                                                            <option  value="Monsieur">Maurice</option>
+                                                                                            <option  value="Monsieur">Mauritanie</option>
+                                                                                            <option  value="Monsieur">Mayotte</option>
+                                                                                            <option  value="Monsieur">Mexique</option>
+                                                                                            <option  value="Monsieur">Moldavie</option>
+                                                                                            <option  value="Monsieur">Monaco</option>
+                                                                                            <option  value="Monsieur">Mongolie</option>
+                                                                                            <option  value="Monsieur">Monténégro</option>
+                                                                                            <option  value="Monsieur">Montserrat</option>
+                                                                                            <option  value="Monsieur">Mozambique</option>
+                                                                                            <option  value="Monsieur">Myanmar (Birmanie)</option>
+                                                                                            <option  value="Monsieur">Namibie</option>
+                                                                                            <option  value="Monsieur">Nauru</option>
+                                                                                            <option  value="Monsieur">Népal</option>
+                                                                                            <option  value="Monsieur">Nicaragua</option>
+                                                                                            <option  value="Monsieur">Niger</option>
+                                                                                            <option  value="Monsieur">Nigéria</option>
+                                                                                            <option  value="Monsieur">Niue</option>
+                                                                                            <option  value="Monsieur">Norvège</option>
+                                                                                            <option  value="Monsieur">Nouvelle-Calédonie</option>
+                                                                                            <option  value="Monsieur">Nouvelle-Zélande</option>
+                                                                                            <option  value="Monsieur">Oman</option>
+                                                                                            <option  value="Monsieur">Ouganda</option>
+                                                                                            <option  value="Monsieur">Ouzbékistan</option>
+                                                                                            <option  value="Monsieur">Pakistan</option>
+                                                                                            <option  value="Monsieur">Palaos</option>
+                                                                                            <option  value="Monsieur">Panama</option>
+                                                                                            <option  value="Monsieur">Papouasie-Nouvelle-Guinée</option>
+                                                                                            <option  value="Monsieur">Paraguay</option>
+                                                                                            <option  value="Monsieur">Pays-Bas</option>
+                                                                                            <option  value="Monsieur">Pays-Bas caribéens</option>
+                                                                                            <option  value="Monsieur">Pérou</option>
+                                                                                            <option  value="Monsieur">Philippines</option>
+                                                                                            <option  value="Monsieur">Pologne</option>
+                                                                                            <option  value="Monsieur">Polynésie française</option>
+                                                                                            <option  value="Monsieur">Porto Rico</option>
+                                                                                            <option  value="Monsieur">Portugal</option>
+                                                                                            <option  value="Monsieur">Qatar</option>
+                                                                                            <option  value="Monsieur">R.A.S. chinoise de Hong Kong</option>
+                                                                                            <option  value="Monsieur">R.A.S. chinoise de Macao</option>
+                                                                                            <option  value="Monsieur">République centrafricaine</option>
+                                                                                            <option  value="Monsieur">République dominicaine</option>
+                                                                                            <option  value="Monsieur">Roumanie</option>
+                                                                                            <option  value="Monsieur">Royaume-Uni</option>
+                                                                                            <option  value="Monsieur">Russie</option>
+                                                                                            <option  value="Monsieur">Rwanda</option>
+                                                                                            <option  value="Monsieur">Sahara occidental</option>
+                                                                                            <option  value="Monsieur">Saint-Barthélemy</option>
+                                                                                            <option  value="Monsieur">Saint-Christophe-et-Niévès</option>
+                                                                                            <option  value="Monsieur">Saint-Marin</option>
+                                                                                            <option  value="Monsieur">Saint-Martin</option>
+                                                                                            <option  value="Monsieur">Saint-Martin (partie néerlandaise)</option>
+                                                                                            <option  value="Monsieur">Saint-Pierre-et-Miquelon</option>
+                                                                                            <option  value="Monsieur">Saint-Vincent-et-les-Grenadines</option>
+                                                                                            <option  value="Monsieur">Sainte-Hélène</option>
+                                                                                            <option  value="Monsieur">Sainte-Lucie</option>
+                                                                                            <option  value="Monsieur">Salvador</option>
+                                                                                            <option  value="Monsieur">Samoa</option>
+                                                                                            <option  value="Monsieur">Samoa américaines</option>
+                                                                                            <option  value="Monsieur">Sao Tomé-et-Principe</option>
+                                                                                            <option  value="Monsieur">Sénégal</option>
+                                                                                            <option  value="Monsieur">Serbie</option>
+                                                                                            <option  value="Monsieur">Seychelles</option>
+                                                                                            <option  value="Monsieur">Sierra Leone</option>
+                                                                                            <option  value="Monsieur">Singapour</option>
+                                                                                            <option  value="Monsieur">Slovaquie</option>
+                                                                                            <option  value="Monsieur">Slovénie</option>
+                                                                                            <option  value="Monsieur">Somalie</option>
+                                                                                            <option  value="Monsieur">Soudan</option>
+                                                                                            <option  value="Monsieur">Soudan du Sud</option>
+                                                                                            <option  value="Monsieur">Sri Lanka</option>
+                                                                                            <option  value="Monsieur">Suède</option>
+                                                                                            <option  value="Monsieur">Suisse</option>
+                                                                                            <option  value="Monsieur">Suriname</option>
+                                                                                            <option  value="Monsieur">Svalbard et Jan Mayen</option>
+                                                                                            <option  value="Monsieur">Syrie</option>
+                                                                                            <option  value="Monsieur">Tadjikistan</option>
+                                                                                            <option  value="Monsieur">Taïwan</option>
+                                                                                            <option  value="Monsieur">Tanzanie</option>
+                                                                                            <option  value="Monsieur">Tchad</option>
+                                                                                            <option  value="Monsieur">Tchéquie</option>
+                                                                                            <option  value="Monsieur">Terres australes françaises</option>
+                                                                                            <option  value="Monsieur">Territoire britannique de l’océan Indien</option>
+                                                                                            <option  value="Monsieur">Territoires palestiniens</option>
+                                                                                            <option  value="Monsieur">Thaïlande</option>
+                                                                                            <option  value="Monsieur">Timor oriental</option>
+                                                                                            <option  value="Monsieur">Togo</option>
+                                                                                            <option  value="Monsieur">Tokelau</option>
+                                                                                            <option  value="Monsieur">Tonga</option>
+                                                                                            <option  value="Monsieur">Trinité-et-Tobago</option>
+                                                                                            <option  value="Monsieur">Tunisie</option>
+                                                                                            <option  value="Monsieur">Turkménistan</option>
+                                                                                            <option  value="Monsieur">Turquie</option>
+                                                                                            <option  value="Monsieur">Tuvalu</option>
+                                                                                            <option  value="Monsieur">Ukraine</option>
+                                                                                            <option  value="Monsieur">Uruguay</option>
+                                                                                            <option  value="Monsieur">Vanuatu</option>
+                                                                                            <option  value="Monsieur">Venezuela</option>
+                                                                                            <option  value="Monsieur">Vietnam</option>
+                                                                                            <option  value="Monsieur">Wallis-et-Futuna</option>
+                                                                                            <option  value="Monsieur">Yémen</option>
+                                                                                            <option  value="Monsieur">Zambie</option>
+                                                                                            <option  value="Monsieur">Zimbabwe</option>
+                                                                                    </select>
+                                        <span class="nationalité_err error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Date de naissance</label>
+                                        <input class="form-control" name="date_de_naissance" type="date" placeholder="Date de naissance" required>
+                                        <span class="date_de_naissance_err error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Lieu de naissance</label>
+                                        <input class="form-control" name="lieu_de_naissance" type="email" placeholder="Lieu de naissance" required>
+                                        <span class="lieu_de_naissance_err error text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="diplome">Attestation/Diplôme (PDF | <= 5 mo)</label>
+                                        <input type="file" id="diplome" name="diplome">
+                                        <span class="diplome_err error text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="acte_de_naissance">Acte de naissance (PDF | <= 5 mo)</label>
+                                        <input type="file" id="acte_de_naissance" name="acte_de_naissance">
+                                        <span class="acte_de_naissance_err error text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="releve_de_note">Relevé de note (PDF | <= 5 mo)</label>
+                                        <input type="file" id="releve_de_note" name="releve_de_note">
+                                        <span class="releve_de_note_err error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="fiche_inscription">Fiche d'inscription (PDF | <= 5 mo)</label>
+                                        <input type="file" id="fiche_inscription" name="fiche_inscription">
+                                        <span class="fiche_inscription_err error text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="photo_identite">Photo d'identité (png,jpg,jpeg | <= 5 mo)</label>
+                                        <input type="file" id="photo_identite" name="photo_identite">
+                                        <span class="photo_identite_err error text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="commentaire">Commentaire</label>
+                                        <textarea class="form-control" name="commentaire" id="commentaire" placeholder="" rows="10" required=""></textarea>
+                                        <span class="commentaire_err error text-danger"></span>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="col-md-12">
+                                    <div class="form-group pb-3">
+                                        <label for="commentaire">Donnez la reponse dans le champs: </label>
+                                        <b>19 + 17 = </b><input type="number" required name="reponse" style="width: 70px">
+                                        <input hidden required name="answer" value="36"><br>
+                                        <span class="reponse_err error text-danger"></span>
+                                    </div>
+                                </div> -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+                <div class="text-right"><br>
+                    <button onclick="storeInscriptionRecord()" class="btn btn-primary solid blank" type="submit">
+                        <strong>
+                            <b id="text-load" class="text-hide">Veuillez patienter...</b>
+                            <b id="text-fix"><span class="fa fa-save"></span> Soumettre mon dossier</b>
+                        </strong>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <!-- <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>ESUEX</h5>
+                    <p>École Supérieure d'Excellence</p>
+                    <p>Formation d'experts en technologies de l'information</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Adresse de l'école</p>
+                    <p><i class="fas fa-phone me-2"></i> +33 1 23 45 67 89</p>
+                    <p><i class="fas fa-envelope me-2"></i> contact@esuex.fr</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>Suivez-nous</h5>
+                    <div class="social-footer">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="text-center mt-3 pt-3 border-top">
+                <p>&copy; 2023 ESUEX - Tous droits réservés</p>
+            </div>
+
+        
+        </div>
+    </footer>
+        <div class="dev">
+                <p>Développé par <a href="https://www.linkedin.com/in/enock-lankoande-1234/" target="_blank">Lankoande Wendenda Enock</a></p>
+
+            </div>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

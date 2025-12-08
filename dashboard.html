@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard Administrateur - ESUEX">
+    <title>Dashboard Admin - ESUEX</title>
+
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+</head>
+
+<body class="dashboard-admin">
+
+<header>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Dropdowns à gauche -->
+            <div class="dropdowns-container d-flex gap-3">
+                <!-- Dashboard -->
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="dropdownAdmin" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownAdmin">
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-chart-line me-2"></i>Statistiques</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-users me-2"></i>Utilisateurs</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Paramètres</a></li>
+                    </ul>
+                </div>
+
+                <!-- Administration -->
+                <div class="dropdown">
+                    <button class="dropdown-toggle" type="button" id="dropdownGestion" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-cogs me-1"></i>Administration
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownGestion">
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user-graduate me-2"></i>Étudiants</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-calendar-alt me-2"></i>Emplois du temps</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-newspaper me-2"></i>Actualités</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-bullhorn me-2"></i>Annonces</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Logo au centre -->
+            <div class="logo-center">
+                <h5 class="mb-0 text-white"><i class="fas fa-shield-alt me-2"></i>PANEL ADMIN</h5>
+            </div>
+
+            <!-- Compte administrateur -->
+            <div class="user-account">
+                <div class="dropdown">
+                    <button class="dropdown-toggle user-toggle" type="button" id="dropdownAdminUser" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-shield me-2"></i>
+                        <span class="user-text">Administrateur</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownAdminUser">
+                        <li class="dropdown-header">
+                            <i class="fas fa-user-cog me-2"></i>
+                            Super Administrateur
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Mon profil</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Paramètres</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-sign-out-alt me-2"></i>Déconnexion</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</header>
+
+<main class="dashboard-main">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-2 col-md-3 sidebar">
+                <div class="sidebar-header">
+                    <h3>Menu Admin</h3>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Tableau de bord</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="etudiants">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Étudiants</span>
+                        <span class="badge bg-warning">1250</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="preinscriptions">
+                        <i class="fas fa-file-upload"></i>
+                        <span>Pré-inscriptions</span>
+                        <span class="badge bg-info">48</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="emplois">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Emplois du temps</span>
+                        <span class="badge bg-success">15</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="evenements">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Événements</span>
+                        <span class="badge bg-primary">8</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="actualites">
+                        <i class="fas fa-newspaper"></i>
+                        <span>Actualités</span>
+                        <span class="badge bg-secondary">12</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="annonces">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Annonces</span>
+                        <span class="badge bg-danger">5</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="statistiques">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Statistiques</span>
+                    </a>
+                    <a href="#" class="nav-item" data-section="parametres">
+                        <i class="fas fa-cogs"></i>
+                        <span>Paramètres</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-10 col-md-9 main-content">
+                <!-- Dashboard Header -->
+                <div class="dashboard-header mb-4">
+                    <h1>Tableau de bord Administrateur</h1>
+                    <p>Gestion complète de la plateforme ESUEX</p>
+                </div>
+
+                <!-- Statistiques en temps réel -->
+                <div class="row mb-4">
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="stat-card stat-card-students">
+                            <div class="stat-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="totalStudents">1,250</h3>
+                                <p>Étudiants inscrits</p>
+                                <small><i class="fas fa-arrow-up text-success me-1"></i> 5% ce mois</small>
+                            </div>
+                            <div class="stat-action">
+                                <button class="btn-action" data-action="view-students">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="stat-card stat-card-preinscriptions">
+                            <div class="stat-icon">
+                                <i class="fas fa-file-upload"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="totalPreinscriptions">48</h3>
+                                <p>Nouvelles pré-inscriptions</p>
+                                <small><i class="fas fa-clock text-warning me-1"></i> En attente</small>
+                            </div>
+                            <div class="stat-action">
+                                <button class="btn-action" data-action="review-documents">
+                                    <i class="fas fa-check-circle"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="stat-card stat-card-emplois">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="totalEmplois">15</h3>
+                                <p>Emplois du temps</p>
+                                <small><i class="fas fa-check-circle text-success me-1"></i> Tous publiés</small>
+                            </div>
+                            <div class="stat-action">
+                                <button class="btn-action" data-action="add-emploi">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="stat-card stat-card-evenements">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h3 id="totalEvenements">8</h3>
+                                <p>Événements à venir</p>
+                                <small><i class="fas fa-exclamation-circle text-info me-1"></i> 2 cette semaine</small>
+                            </div>
+                            <div class="stat-action">
+                                <button class="btn-action" data-action="add-event">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenu dynamique -->
+                <div class="content-sections">
+                    <!-- Section Étudiants (CRUD) -->
+                    <section id="section-etudiants" class="content-section active">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h3>Gestion des Étudiants</h3>
+                                <button class="btn btn-primary" id="addStudentBtn">
+                                    <i class="fas fa-plus me-2"></i>Ajouter un étudiant
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover" id="studentsTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Matricule</th>
+                                                <th>Nom complet</th>
+                                                <th>Email</th>
+                                                <th>Filière</th>
+                                                <th>Année</th>
+                                                <th>Statut</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="studentsTableBody">
+                                            <!-- Données chargées dynamiquement -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Pré-inscriptions -->
+                    <section id="section-preinscriptions" class="content-section">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Documents de pré-inscription</h3>
+                            </div>
+                            <div class="card-body">
+                                <div id="preinscriptionsList">
+                                    <!-- Documents chargés dynamiquement -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Emplois du temps -->
+                    <section id="section-emplois" class="content-section">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h3>Emplois du temps</h3>
+                                <button class="btn btn-primary" id="addEmploiBtn">
+                                    <i class="fas fa-plus me-2"></i>Nouvel emploi du temps
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div id="emploisList" class="row">
+                                    <!-- Emplois chargés dynamiquement -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Événements -->
+                    <section id="section-evenements" class="content-section">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h3>Événements</h3>
+                                <button class="btn btn-primary" id="addEventBtn">
+                                    <i class="fas fa-plus me-2"></i>Nouvel événement
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div id="eventsList">
+                                    <!-- Événements chargés dynamiquement -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Actualités -->
+                    <section id="section-actualites" class="content-section">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h3>Actualités</h3>
+                                <button class="btn btn-primary" id="addActualiteBtn">
+                                    <i class="fas fa-plus me-2"></i>Nouvelle actualité
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div id="actualitesList">
+                                    <!-- Actualités chargées dynamiquement -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Annonces -->
+                    <section id="section-annonces" class="content-section">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h3>Annonces</h3>
+                                <button class="btn btn-primary" id="addAnnonceBtn">
+                                    <i class="fas fa-plus me-2"></i>Nouvelle annonce
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div id="annoncesList">
+                                    <!-- Annonces chargées dynamiquement -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Quick Actions -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="card quick-actions-card">
+                            <div class="card-header">
+                                <h3>Actions rapides</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-3 col-sm-6">
+                                        <button class="quick-action-btn" data-action="send-notification">
+                                            <i class="fas fa-bell"></i>
+                                            <span>Envoyer notification</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <button class="quick-action-btn" data-action="export-data">
+                                            <i class="fas fa-file-export"></i>
+                                            <span>Exporter données</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <button class="quick-action-btn" data-action="backup-system">
+                                            <i class="fas fa-database"></i>
+                                            <span>Sauvegarde système</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <button class="quick-action-btn" data-action="clear-cache">
+                                            <i class="fas fa-broom"></i>
+                                            <span>Vider le cache</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Modals pour CRUD -->
+<div class="modal fade" id="crudModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Contenu dynamique -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-primary" id="modalSaveBtn">Enregistrer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="confirmMessage">
+                Êtes-vous sûr de vouloir supprimer cet élément ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Supprimer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+<script src="script/dash.js"></script>
+
+</body>
+</html>
