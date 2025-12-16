@@ -2,6 +2,7 @@
 const titleElement = document.querySelector(".entry-title u");
 const imageElement = document.querySelector("#filiere-image");
 const textElement = document.querySelector("#filiere-text");
+const filiereTitle =document.getElementById("filiere-title");
 
 // Sélection de TOUS les boutons de filière (querySelectorAll au lieu de querySelector)
 const sidebarLinks = document.querySelectorAll(".filiere-btn");
@@ -63,6 +64,7 @@ sidebarLinks.forEach(link => {
             imageElement.src = data.image;
             imageElement.alt = data.title;
             textElement.textContent = data.text;
+            filiereTitle.textContent =data.title;
             
             // Optionnel : Ajouter un effet visuel pour le bouton actif
             sidebarLinks.forEach(btn => btn.classList.remove('active'));
@@ -86,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
             imageElement.alt = defaultData.title;
             textElement.textContent = defaultData.text;
             sidebarLinks[0].classList.add('active');
+            filiereTitle.textContent =defaultData.title;
         }
     }
 });

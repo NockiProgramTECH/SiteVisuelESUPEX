@@ -10,7 +10,7 @@
     background-position: center;
     position: relative;
     padding: 40px 0 0 90px;
-    top: 95px;
+    top: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,21 +70,6 @@
         font-size: 26px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ---- CONTENEUR GLOBAL ---- */
@@ -175,6 +160,7 @@
     width: 100%;
     border-radius: 6px;
     object-fit: cover;
+    height: 300px
 }
 
 /* Texte article */
