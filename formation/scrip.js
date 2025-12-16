@@ -15,8 +15,8 @@ const filieresData = {
         text: "Voici la description complète de la filière Système d'information et réseaux..."
     },
     EII: {
-        title: "Electronique Informatique Industriel",
-        image: "/img/gbm.jpg",
+        title: "Electricité Informatique Industriel",
+        image: "/img/SIR.jpg",
         text: "Description de la filière Electronique INformatique Industriel",
     },
 
@@ -47,7 +47,7 @@ console.log("Nombre de boutons trouvés :", sidebarLinks.length);
 
 sidebarLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-        // Correction : preventDefault() (pas preventDefautl)
+        // Correction : preventDefault() (pas preventDefautl()
         e.preventDefault();
         
         // Correction : dataset.filiere (pas filliere)
